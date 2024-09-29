@@ -1,0 +1,12 @@
+com/curriculo/model/Project.class
+com/curriculo/repository/EducationRepository.class
+com/curriculo/service/EducationService.class
+com/curriculo/repository/SkillRepository.class
+com/curriculo/model/Skill.class
+com/curriculo/controller/ExperienceController.class
+com/curriculo/controller/EducationController.class
+com/curriculo/service/ExperienceService.class
+com/curriculo/CurriculoApplication.class
+com/curriculo/model/Experience.class
+com/curriculo/model/Education.class
+com/curriculo/repository/ExperienceRepository.class

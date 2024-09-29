@@ -1,0 +1,12 @@
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/CurriculoApplication.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/controller/EducationController.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/controller/ExperienceController.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/model/Education.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/model/Experience.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/model/Project.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/model/Skill.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/repository/EducationRepository.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/repository/ExperienceRepository.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/repository/SkillRepository.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/service/EducationService.java
+/home/gabriela_zuppardo/Área de Trabalho/Curriculo_SpringBoot/curriculo/curriculo/src/main/java/com/curriculo/service/ExperienceService.java
