@@ -14,7 +14,6 @@ public class Skill {
     private String name ;
 
     private String proficiencyLevel;
-    private String courses;
 
     public Long getId() {
         return id;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class WelcomeController {
 
-    @GetMapping("/welcome")
+    @GetMapping("/")
     public String welcomeMessage() {
         return "Hola, seja bem-vinda à central de currículos!";
     }
