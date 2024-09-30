@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000") // Ajuste este valor conforme suas necessidades de segurança
+@CrossOrigin(origins = "https://apicurriculo-s00b.onrender.com") // Ajuste este valor conforme suas necessidades de segurança
 @RequestMapping("/api/welcome") // Definindo um endpoint mais específico
 public class WelcomeController {
 
