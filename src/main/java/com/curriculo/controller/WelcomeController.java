@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "*") // Ajuste este valor conforme suas necessidades de segurança
-@RequestMapping("/api/welcome") // Definindo um endpoint mais específico
+@RequestMapping("/api/welcome")
+@ComponentScan(basePackages = "com.curriculo")
+
+
 public class WelcomeController {
 
     /**
