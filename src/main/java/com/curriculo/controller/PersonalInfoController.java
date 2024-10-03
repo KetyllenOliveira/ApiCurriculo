@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/personalinfo")
+@RequestMapping("/api/v1/personalinfo") // Mapeia o prefixo "/api/v1/personalinfo"
 public class PersonalInfoController {
 
     private final PersonalInfoRepository personalInfoRepository;
@@ -67,7 +67,6 @@ public class PersonalInfoController {
                                                            @RequestBody PersonalInfo personalInfoDetails) {
         return personalInfoRepository.findById(id)
                 .map(existingInfo -> {
-                    // Atualiza os campos do objeto existente
                     existingInfo.setName(personalInfoDetails.getName());
                     existingInfo.setEmail(personalInfoDetails.getEmail());
                     existingInfo.setPhoneNumber(personalInfoDetails.getPhoneNumber());
@@ -75,7 +74,7 @@ public class PersonalInfoController {
                     existingInfo.setLinkedinProfile(personalInfoDetails.getLinkedinProfile());
                     existingInfo.setGithubProfile(personalInfoDetails.getGithubProfile());
                     existingInfo.setObjective(personalInfoDetails.getObjective());
-                    
+
                     PersonalInfo updatedInfo = personalInfoRepository.save(existingInfo);
                     return ResponseEntity.ok(updatedInfo);
                 })

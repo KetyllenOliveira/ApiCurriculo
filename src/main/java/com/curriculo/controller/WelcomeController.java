@@ -1,14 +1,12 @@
 package com.curriculo.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
-
+@RequestMapping("/api") // Mapeia o prefixo "/api" para este controlador
 public class WelcomeController {
 
     /**
@@ -16,7 +14,7 @@ public class WelcomeController {
      * 
      * @return uma mensagem de boas-vindas em formato de ResponseEntity
      */
-    @GetMapping("/welcome")
+    @GetMapping("/welcome") // Acesso em "/api/welcome"
     public ResponseEntity<String> welcome() {
         return ResponseEntity.ok("Bem-vindo à API de Currículos!");
     }
