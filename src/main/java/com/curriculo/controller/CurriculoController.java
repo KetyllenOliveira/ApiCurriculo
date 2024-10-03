@@ -11,7 +11,7 @@ import com.curriculo.model.Curriculo;
 import com.curriculo.service.CurriculoService;
 
 @RestController
-@RequestMapping("/api/curriculos")
+@RequestMapping("/")
 public class CurriculoController {
 
     @Autowired
