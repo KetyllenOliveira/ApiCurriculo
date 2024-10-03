@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/welcome")
-@ComponentScan(basePackages = "com.curriculo")
-
 
 public class WelcomeController {
 
