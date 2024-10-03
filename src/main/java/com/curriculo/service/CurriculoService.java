@@ -1,6 +1,7 @@
 package com.curriculo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,15 +12,16 @@ import com.curriculo.repository.CurriculoRepository;
 @Service
 public class CurriculoService {
 
-        @Autowired
+    @Autowired
     private CurriculoRepository curriculoRepository;
 
     public List<Curriculo> listarCurriculos() {
         return curriculoRepository.findAll();
     }
 
-    public Curriculo obterCurriculoPorId(Long id) {
-        return curriculoRepository.findById(id).orElse(null);
+    // Atualizado para retornar Optional<Curriculo>
+    public Optional<Curriculo> obterCurriculoPorId(Long id) {
+        return curriculoRepository.findById(id);
     }
 
     public Curriculo salvarCurriculo(Curriculo curriculo) {
@@ -29,5 +31,4 @@ public class CurriculoService {
     public void deletarCurriculo(Long id) {
         curriculoRepository.deleteById(id);
     }
-    
 }

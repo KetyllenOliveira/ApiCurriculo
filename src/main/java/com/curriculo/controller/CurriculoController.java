@@ -1,6 +1,7 @@
 package com.curriculo.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,9 +24,9 @@ public class CurriculoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Curriculo> obterCurriculoPorId(@PathVariable Long id) {
-        return curriculoService.obterCurriculoPorId(id)
-            .map(ResponseEntity::ok)
-            .orElse(ResponseEntity.notFound().build());
+        Optional<Curriculo> curriculo = curriculoService.obterCurriculoPorId(id);
+        return curriculo.map(ResponseEntity::ok)
+                        .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
@@ -35,22 +36,21 @@ public class CurriculoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Curriculo> atualizarCurriculo(@PathVariable Long id, @RequestBody Curriculo curriculo) {
-        return curriculoService.obterCurriculoPorId(id)
-            .map(curriculoExistente -> {
-                curriculoExistente.atualizarDados(curriculo);
-                return ResponseEntity.ok(curriculoService.salvarCurriculo(curriculoExistente));
-            })
-            .orElse(ResponseEntity.notFound().build());
+        Optional<Curriculo> curriculoExistente = curriculoService.obterCurriculoPorId(id);
+        return curriculoExistente.map(existente -> {
+            existente.atualizarDados(curriculo);
+            Curriculo atualizado = curriculoService.salvarCurriculo(existente);
+            return ResponseEntity.ok(atualizado);
+        }).orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletarCurriculo(@PathVariable Long id) {
-        return curriculoService.obterCurriculoPorId(id)
-            .map(curriculo -> {
-                curriculoService.deletarCurriculo(id);
-                return ResponseEntity.noContent().build();
-            })
-            .orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<Object> deletarCurriculo(@PathVariable Long id) {
+        Optional<Curriculo> curriculoExistente = curriculoService.obterCurriculoPorId(id);
+        return curriculoExistente.map(curriculo -> {
+            curriculoService.deletarCurriculo(id);
+            return ResponseEntity.noContent().build();
+        }).orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/")
@@ -58,3 +58,4 @@ public class CurriculoController {
         return "Bem vindo à central de currículos";
     }
 }
+

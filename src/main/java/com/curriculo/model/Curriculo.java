@@ -83,4 +83,15 @@ public class Curriculo {
     public void setCertificacao(String certificacao) {
         this.certificacao = certificacao;
     }
+
+    // Método para atualizar dados de um currículo existente
+    public void atualizarDados(Curriculo novoCurriculo) {
+        this.nome = novoCurriculo.getNome();
+        this.idade = novoCurriculo.getIdade();
+        this.sexo = novoCurriculo.getSexo();
+        this.formacaoAcademica = novoCurriculo.getFormacaoAcademica();
+        this.experiencia = novoCurriculo.getExperiencia();
+        this.cursosLivres = novoCurriculo.getCursosLivres();
+        this.certificacao = novoCurriculo.getCertificacao();
+    }
 }
